@@ -1,9 +1,10 @@
 pipeline{
     agent any
+    tools{
+        nodejs 'Node18'
+    }
     stages{
-        tools {
-            nodejs 'Node18'
-        }
+        
         stage('Build'){
             steps{
                 sh '''
